@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Get and download available YouTube video thumbnails in HD, SD, and other available sizes. Free online YouTube thumbnail downloader.">
+  <meta name="theme-color" content="#ff0033">
+  <title>YouTube Thumbnail Downloader — Free HD Preview & Download</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="ThumbFetch home">
+      <span class="brand-icon" aria-hidden="true">▶</span><span>Thumb<span class="brand-accent">Fetch</span></span>
+    </a>
+    <nav><a href="#how-it-works">How it works</a><a href="#faq">FAQ</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> FREE ONLINE TOOL</div>
+      <h1>YouTube Thumbnail<br><span>Downloader</span></h1>
+      <p class="hero-copy">Paste a YouTube video link, preview available thumbnail sizes, and save the image in seconds.</p>
+
+      <form id="thumbnail-form" class="url-form">
+        <label class="sr-only" for="video-url">YouTube video URL</label>
+        <span class="url-icon" aria-hidden="true">↗</span>
+        <input id="video-url" name="url" type="url" placeholder="Paste YouTube video link here..." autocomplete="url" required>
+        <button id="get-button" type="submit">Get Thumbnail <span aria-hidden="true">→</span></button>
+      </form>
+      <p class="input-help">Supports youtube.com, youtu.be, Shorts, and YouTube embed links.</p>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <section id="results" class="results hidden" aria-labelledby="results-title">
+        <div class="results-heading">
+          <div><p class="section-kicker">YOUR THUMBNAIL</p><h2 id="results-title">Available image sizes</h2></div>
+          <button id="clear-button" class="text-button" type="button">Clear</button>
+        </div>
+        <div id="video-summary" class="video-summary"></div>
+        <div id="thumbnail-grid" class="thumbnail-grid"></div>
+        <p class="results-note">Availability depends on the video. If a size is missing, that image may not exist for this video.</p>
+      </section>
+    </section>
+
+    <section class="trust-row" aria-label="Benefits">
+      <div><span class="benefit-icon">⚡</span><span><strong>Fast & simple</strong><small>No account required</small></span></div>
+      <div><span class="benefit-icon">▣</span><span><strong>Multiple sizes</strong><small>Choose available quality</small></span></div>
+      <div><span class="benefit-icon">♡</span><span><strong>Free to use</strong><small>No paid API needed</small></span></div>
+    </section>
+
+    <section id="how-it-works" class="info-section">
+      <p class="section-kicker">THREE SIMPLE STEPS</p>
+      <h2>How to download a thumbnail</h2>
+      <div class="steps">
+        <article class="step-card"><span class="step-number">01</span><h3>Copy the video link</h3><p>Open a YouTube video and copy its URL from the address bar or Share menu.</p></article>
+        <article class="step-card"><span class="step-number">02</span><h3>Paste and preview</h3><p>Paste the link above and choose “Get Thumbnail” to check available images.</p></article>
+        <article class="step-card"><span class="step-number">03</span><h3>Download an image</h3><p>Pick an available size and use its download button to save the image.</p></article>
+      </div>
+    </section>
+
+    <section id="faq" class="info-section faq-section">
+      <p class="section-kicker">HELP CENTER</p>
+      <h2>Frequently asked questions</h2>
+      <details><summary>Is this tool free?</summary><p>Yes. This static tool does not require a paid API or account. Standard internet and hosting terms still apply.</p></details>
+      <details><summary>Why is HD unavailable for some videos?</summary><p>YouTube does not provide every thumbnail size for every video. The tool checks common thumbnail image URLs and shows the sizes that load.</p></details>
+      <details><summary>Can I use any thumbnail anywhere?</summary><p>Downloading an image does not give you copyright ownership. Get permission or make sure you have the right to reuse a thumbnail.</p></details>
+      <details><summary>Does this website belong to YouTube?</summary><p>No. ThumbFetch is an independent tool and is not affiliated with or endorsed by YouTube or Google.</p></details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="./"><span class="brand-icon" aria-hidden="true">▶</span><span>Thumb<span class="brand-accent">Fetch</span></span></a>
+    <p>An independent thumbnail utility. Not affiliated with YouTube or Google.</p>
+    <div class="footer-links"><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div>
+    <small>© <span id="year"></span> ThumbFetch. Use thumbnails responsibly.</small>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
